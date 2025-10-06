@@ -11,13 +11,15 @@ body {
     overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
+
+
 /* ---------- Header ---------- */
 .headerContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 5fr 3fr;
     align-items: center;
     width: 100%;
-    background-color: blue;
+    background-color: hsl(18, 70%, 50%);
     padding: 20px 40px;
     position: sticky;
     top: 0;
@@ -35,7 +37,8 @@ body {
 .headerTitle {
     text-align: center;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    justify-self: left;
 }
 
 /* Navigation */
@@ -46,10 +49,16 @@ body {
     flex-wrap: wrap;
 }
 
-.headerNav a {
-    padding: 8px 12px;
+.currentNav{
+    background-color: hsl(110, 80%, 70%);
+    border: solid 2px hsl(154, 65%, 45%);
+}
+
+.headerNav a{
+    padding: 10px 35px;
     text-decoration: none;
-    background-color: lightgray;
+    background-color: hsl(34, 80%, 70%);
+    border: solid 2px hsl(18, 65%, 45%);
     border-radius: 5px;
     color: black;
     font-weight: bold;
@@ -57,8 +66,19 @@ body {
     transition: background-color 0.3s;
 }
 
-.headerNav a:hover {
+.currentNav{
+    background-color: hsl(110, 80%, 70%);
+    border: solid 2px hsl(154, 65%, 45%);
+}
+
+.otherNav {
+    background-color: hsl(34, 80%, 70%);
+    border: solid 2px hsl(18, 65%, 45%);
+}
+
+.otherNav:hover {
     background-color: #ddd;
+    background-color: hsl(34, 80%, 60%);
 }
 
 /* ---------- Responsive ---------- */
@@ -90,6 +110,8 @@ body {
         max-width: 80px;
     }
 }
+
+
 
 /* ---------- Petits téléphones ---------- */
 @media (max-width: 480px) {
