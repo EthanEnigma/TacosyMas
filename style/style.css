@@ -81,6 +81,30 @@ body {
     background-color: hsl(34, 80%, 60%);
 }
 
+
+
+/* ---------- PAGE MENU ---------- */
+.bodyContainer{
+    text-align: center;
+}
+
+.CardContainer{
+    justify-self: center;
+    width: 40vw;
+    background-color: #c4f9c4;
+
+}
+
+.CardIMG{
+    justify-items: center;
+    background-color: white;
+}
+
+.CardTxt{
+    
+}
+
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .headerContainer {
