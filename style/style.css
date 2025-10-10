@@ -57,8 +57,6 @@ body {
 .headerNav a{
     padding: 10px 35px;
     text-decoration: none;
-    background-color: hsl(34, 80%, 70%);
-    border: solid 2px hsl(18, 65%, 45%);
     border-radius: 5px;
     color: black;
     font-weight: bold;
@@ -67,8 +65,11 @@ body {
 }
 
 .currentNav{
-    background-color: hsl(110, 80%, 70%);
-    border: solid 2px hsl(154, 65%, 45%);
+    background-color: hsl(122, 40%, 61%);
+    border: solid 2px hsl(122, 40%, 41%);
+}
+.currentNav:hover{
+    background-color: hsl(122, 40%, 50%);
 }
 
 .otherNav {
@@ -77,7 +78,6 @@ body {
 }
 
 .otherNav:hover {
-    background-color: #ddd;
     background-color: hsl(34, 80%, 60%);
 }
 
