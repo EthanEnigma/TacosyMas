@@ -92,16 +92,19 @@ body {
     justify-self: center;
     width: 40vw;
     background-color: #c4f9c4;
+    border: solid 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
 
 }
 
 .CardIMG{
     justify-items: center;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px 15px 0px 0px;
 }
 
 .CardTxt{
-    
+    padding: 20px;
 }
 
 
