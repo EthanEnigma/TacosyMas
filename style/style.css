@@ -95,7 +95,7 @@ body {
     width: fit-content;
     overflow: hidden;
     width: 40vw;
-    background-color: #f9edc4;
+    background-color: rgb(249, 237, 196);
     box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
     border-radius: 20px;
 }
