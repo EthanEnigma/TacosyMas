@@ -86,15 +86,18 @@ body {
 /* ---------- PAGE MENU ---------- */
 .bodyContainer{
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .CardContainer{
     justify-self: center;
+    width: fit-content;
+    overflow: hidden;
     width: 40vw;
-    background-color: #c4f9c4;
-    border: solid 5px rgba(0, 0, 0, 0.2);
+    background-color: #f9edc4;
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
     border-radius: 20px;
-
 }
 
 .CardIMG{
