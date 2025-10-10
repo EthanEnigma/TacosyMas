@@ -180,5 +180,12 @@ body {
 }
 
 
+/* Price */
+.Price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
 
 
