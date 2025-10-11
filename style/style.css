@@ -5,187 +5,362 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
+.customHR{
+    border: solid hsl(18, 80%, 80%) 2px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 50px 0 10px 0;
+}
 
 
-/* ---------- Header ---------- */
+
+/* ---------- HEADER ---------- */
 .headerContainer {
     display: grid;
-    grid-template-columns: 1fr 5fr 3fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    width: 100%;
     background-color: hsl(18, 70%, 50%);
-    padding: 5px 40px;
+    padding: 8px 20px;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-/* Logo */
 .LogoIMG {
-    width: 8vw;
-    min-width: 60px;
-    max-width: 100px;
+    width: 70px;
+    max-width: 80px;
 }
 
-/* Titre */
 .headerTitle {
     text-align: center;
     color: white;
-    font-size: 1.2rem;
-    justify-self: left;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-/* Navigation */
 .headerNav {
     display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    flex-wrap: wrap;
+    gap: 8px;
 }
 
-.currentNav{
-    background-color: hsl(110, 80%, 70%);
-    border: solid 2px hsl(154, 65%, 45%);
-}
-
-.headerNav a{
-    padding: 10px 35px;
+.headerNav a {
+    padding: 6px 14px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     color: black;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: background-color 0.3s;
 }
 
-.currentNav{
+.currentNav {
     background-color: hsl(122, 40%, 61%);
-    border: solid 2px hsl(122, 40%, 41%);
+    border: 2px solid hsl(122, 40%, 41%);
 }
-.currentNav:hover{
-    background-color: hsl(122, 40%, 50%);
-}
-
 .otherNav {
     background-color: hsl(34, 80%, 70%);
-    border: solid 2px hsl(18, 65%, 45%);
+    border: 2px solid hsl(18, 65%, 45%);
+}
+.headerNav a:hover {
+    filter: brightness(0.9);
 }
 
-.otherNav:hover {
-    background-color: hsl(34, 80%, 60%);
+/* ---------- MENU NAVIGATION ---------- */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* cache le checkbox */
+#menu-toggle {
+    display: none;
 }
 
 
 
 /* ---------- PAGE MENU ---------- */
-.bodyContainer{
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-.CardContainer{
-    justify-self: center;
-    width: fit-content;
-    overflow: hidden;
-    width: 40vw;
-    background-color: rgb(249, 237, 196);
-    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
-    border-radius: 20px;
-}
-
-.CardIMG{
-    justify-items: center;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 15px 15px 0px 0px;
-}
-
-.CardTxt{
-    padding: 20px;
-}
-
-
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-    .headerContainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        text-align: center;
-        padding: 15px 20px;
-        gap: 10px;
-    }
-
-    .headerTitle {
-        font-size: 1.4rem;
-    }
-
-    .headerNav {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .headerNav a {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-
-    .LogoIMG {
-        width: 20vw;
-        max-width: 80px;
-    }
-}
-
-
-
-/* ---------- Petits téléphones ---------- */
-@media (max-width: 480px) {
-    .headerTitle {
-        font-size: 1.2rem;
-    }
-
-    .headerNav {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .headerNav a {
-        width: 80%;
-        font-size: 0.85rem;
-    }
-}
-
-/* ---------- Menu ---------- */
+/* Body Container */
 .bodyContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     gap: 20px;
+    text-align: center;
 }
 
-/* Images du menu */
-.MenuBodyImage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 50%;
+/* Liste Cartes Snacks */
+.SnacksCardList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4vw 1.5vw;
 }
 
+/* Liste Cartes Plats */
+.PlatsCardList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw 1.5vw;
+}
 
-/* Price */
-.Price {
+/* Liste Cartes Desserts */
+.DessertsCardList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4vw 1.5vw;
+}
+
+/* Cartes Snacks */
+.SnacksCardContainer{
+    justify-self: center;
+    width: 20vw;
+    background-color: hsl(46, 85%, 85%);
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
+    border-radius: 10px;
+}
+
+/* Cartes Plats */
+.PlatsCardContainer{
+    justify-self: center;
+    width: 30vw;
+    background-color: hsl(46, 85%, 85%);
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
+    border-radius: 10px;
+}
+
+/* Cartes Desserts */
+.DessertsCardContainer{
+    justify-self: center;
+    width: 20vw;
+    background-color: hsl(46, 85%, 85%);
+    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
+    border-radius: 10px;
+}
+
+/* Images Cartes */
+.CardIMG{
+    position: relative;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+.CardIMG img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    object-position: 50% 60%;
+}
+
+/* Tag Prix Cartes */
+.CardIMG #CardTag{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    color: black;
     font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 10px;
+}
+
+/* Titres Cartes */
+.CardTitle{
+    padding: 10px;
+    height: fit-content;
+}
+
+
+/* Titres */
+.CardTitle h2{
+    color: hsl(20, 80%, 50%);
+}
+
+/* Descriptions Cartes */
+.CardTxt{
+    width: 100%;
+    padding: 20px;
+}
+
+
+.Title_Important{
+    color: hsl(20, 80%, 50%);
+    margin: 25px;
+    text-align: center;
+}
+.TXT_Important{
+    color: hsl(20, 100%, 65%);
+}
+
+.Card img{
+    transition: all ease 0.1s;
+}
+
+.Card img:hover{
+    transform: scale(1.05);
+    transition: all ease 0.1s;
+}
+
+
+/* ---------- FOOTER ---------- */
+.FooterContainer{
+    width: 100%;
+    margin-top: 50px;
+    background-color: hsl(18, 70%, 50%);
+    color: white;
+    margin: 50px 0 0 0;
+    padding: 0;
+    justify-items: center;
+}
+
+.FooterWrapper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.FooterContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.FooterContent img{
+    width: 60px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.FooterContent h4{
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: white;
 }
 
 
 
+/* Bouton Retour en haut */
+.back-to-top {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(18, 70%, 45%);
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	text-decoration: none;
+	transition: 0.2s ease-out;
+}
+
+.back-to-top span {
+	color: #fff;
+	font-size: 3rem;
+	transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+	background-color: hsl(18, 70%, 40%);
+}
+.back-to-top:hover span {
+	transform: translateY(-4px);
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .headerContainer {
+        grid-template-columns: auto 1fr auto;
+        padding: 10px 15px;
+    }
+
+    .headerTitle h1 {
+        font-size: 1rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Nav Cachée par Défaut */
+    .headerNav {
+        display: none;
+        flex-direction: column;
+        background-color: hsl(18, 70%, 45%);
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+
+    /* Quand menu ouvert */
+    #menu-toggle:checked + .menu-icon + .headerNav {
+        display: flex;
+    }
+
+    .headerNav a {
+        color: white;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+        text-align: center;
+        border: none;
+        background-color: transparent;
+    }
+
+    .headerNav a:hover {
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 5px;
+    }
+
+    /* Cartes Snacks */
+    .SnacksCardList{
+        grid-template-columns: 1fr;
+    }
+
+    .SnacksCardContainer{
+        width: 80vw;
+    }
+
+    /* Cartes Plats */
+    .PlatsCardList{
+        grid-template-columns: 1fr;
+    }
+
+    .PlatsCardContainer{
+        width: 80vw;
+    }
+
+    /* Cartes Desserts */
+    .DessertsCardList{
+        grid-template-columns: 1fr;
+    }
+
+    .DessertsCardContainer{
+        width: 80vw;
+    }
+}

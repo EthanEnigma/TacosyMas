@@ -3,108 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú</title>
+    <title>Tacos y Más - Menú</title>
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 </head>
 <body>
+    <!-- ---------- HEADER ---------- -->
     <div class="headerContainer">
         <div class="headerImage">
             <a href="index.html">
                 <img class="LogoIMG" src="images/Logo.png" alt="Logo Tacos y Más">
             </a>
         </div>
+
         <div class="headerTitle">
-            <h1>Restaurant - Tacos y Más</h1>
+            <h1>Menu - Tacos y Más</h1>
         </div>
+
+        <!-- Bouton Navigation -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <!-- Navigation -->
         <div class="headerNav">
-            <a class="currentNav" href="menu.html">Menú</a>
-            <a class="otherNav" href="galerie.html">Galería</a>
-            <a class="otherNav" href="apropos.html">Acerca de</a>
+            <a class="otherNav" href="index.html">Accueil</a>
+            <a class="currentNav" href="menu.html">Menu</a>
+            <a class="otherNav" href="galerie.html">Galerie</a>
+            <a class="otherNav" href="apropos.html">A Propos</a>
         </div>
     </div>
+
+    <!-- ---------- BODY ---------- -->
     <div class="bodyContainer">
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/tacos.jpeg" alt="Image Tacos Mexicain">
+        <!-- ---------- ACCOMPAGNEMENTS SNACKS ---------- -->
+        <h1 class="Title_Important">Accompagnements / Snacks</h1>
+        <div class="SnacksCardList">
+            <!-- Nachos -->
+            <div class="SnacksCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/nachos.jpg" alt="Image de nachos croustillants garnis de fromage fondu et pico de gallo.">
+                    <p id="CardTag">7,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Nachos</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Nachos</span> - Chips croustillantes, fromage fondu, pico de gallo et options pour partager.
+                    </p>
+                </div>
             </div>
-            <div class="Price">8€</div>
-            <div class="CardTxt">
-                <p>
-                    Tacos Classique — Viande juteuse, salade fraîche et fromage, servis avec notre sauce 
-                    maison pour un goût authentique et réconfortant.
-                </p>
+
+            <!-- Tortillas -->
+            <div class="SnacksCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Tortillas.jpg" alt="Image de tortillas maison moelleuses empilées sur une assiette.">
+                    <p id="CardTag">4,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Tortillas</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Tortillas</span> - Maison et fraîches : l'accompagnement parfait pour tous nos plats.
+                    </p>
+                </div>
             </div>
+
+            <!-- Chilaquiles -->
+            <div class="SnacksCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Chilaquiles.jpg" alt="Assiette de chilaquiles croustillants avec sauce piquante et fromage fondu.">
+                    <p id="CardTag">6,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Chilaquiles</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Chilaquiles</span> - Plat traditionnel aux tortillas croustillantes, 
+                        salsa piquante et œuf ou fromage selon votre choix.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Guacamole y Totopos -->
+            <div class="SnacksCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/guacamole.jpg" alt="Bol de guacamole frais servi avec des chips de maïs dorées.">
+                    <p id="CardTag">6,00 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Guacamole y Totopos</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Guacamole</span> - Guacamole frais et onctueux accompagné de chips de maïs dorées et autres petits snacks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Elotes -->
+            <div class="SnacksCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Elotes.png" alt="Photo d’un épi de maïs grillé avec mayonnaise, fromage et piment.">
+                    <p id="CardTag">5,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Elotes</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Elotes</span> - Maïs grillé à la perfection, recouvert de sauce, fromage et chili.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sopa de Frijoles -->
+            <div class="SnacksCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/SopaDeFrijoles.jpg" alt="Bol de soupe mexicaine aux haricots noirs et épices.">
+                    <p id="CardTag">5,00 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Sopa de Frijoles</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Sopa de Frijoles</span> - Soupe chaude de haricots noirs, épicée juste ce qu’il faut pour réchauffer le cœur.
+                    </p>
+                </div>
+            </div>
+
         </div>
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/enchiladas.jpg" alt="Image Enchiladas Mexicain">
+
+        <hr class="customHR">
+
+        <!-- ---------- PLATS PRINCIPAUX ---------- -->
+        <h1 class="Title_Important">Plats Principaux</h1>
+        <div class="PlatsCardList">
+            <!-- Tacos -->
+            <div class="PlatsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/tacos.jpeg" alt="Tacos français garnis de viande, frites et sauce maison.">
+                    <p id="CardTag">9,00 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>French Tacos</h2>
+                </div>
+                <div class="CardTxt">
+                    <p>
+                        <span class="TXT_Important">French Tacos</span> - Viande juteuse, salade fraîche et fromage, servis avec notre sauce 
+                        maison pour un goût authentique et réconfortant.
+                    </p>
+                </div>
             </div>
-            <div class="Price">7.50€</div>
-            <div class="CardTxt">             
-                <p>
-                    Enchiladas — Tortillas roulées, nappées d'une sauce riche et gratinées 
-                    au four pour une explosion de saveurs.
-                </p>
+
+            <!-- Enchiladas -->
+            <div class="PlatsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/enchiladas.jpg" alt="Enchiladas gratinées nappées de sauce rouge et fromage fondu.">
+                    <p id="CardTag">7,50€</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Enchiladas</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Enchiladas</span> - Tortillas roulées, nappées d'une sauce riche et gratinées 
+                        au four pour une explosion de saveurs.
+                    </p>
+                </div>
             </div>
+
+            <!-- Quesadillas -->
+            <div class="PlatsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/quesadillas.png" alt="Quesadillas dorées et croustillantes avec fromage fondant.">
+                    <p id="CardTag">9,00€</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Quesadillas</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Quesadillas</span> - Tortilla croustillante garnie de fromage fondant et 
+                        d'ingrédients au choix, simple et gourmand.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Burritos -->
+            <div class="PlatsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Burritos.jpg" alt="Burrito mexicain roulé avec haricots, viande et légumes.">
+                    <p id="CardTag">7,00€</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Burritos</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Burritos</span> - Farce généreuse en riz, haricots et viande, enroulée 
+                        pour un repas complet à emporter.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tamales -->
+            <div class="PlatsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Tamales.jpg" alt="Tamales traditionnels mexicains cuits dans des feuilles de maïs.">
+                    <p id="CardTag">7,00 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Tamales</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Tamales</span> - Spécialité traditionnelle cuite à la vapeur, 
+                        farcie de viande ou de légumes, enveloppée dans une feuille de maïs.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tostadas -->
+            <div class="PlatsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Tostadas.jpg" alt="Tostadas croustillantes garnies de viande, légumes et crème.">
+                    <p id="CardTag">7,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Tostadas</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Tostadas</span> - Tortillas croustillantes garnies de viande,
+                         salade fraîche et haricots pour un contraste parfait.
+                    </p>
+                </div>
+            </div>
+
         </div>
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/quesadillas.png" alt="Image Quesadillas Mexicain">
+
+        <hr class="customHR">
+
+        <!-- ---------- DESSERTS ---------- -->
+        <h1 class="Title_Important">Desserts</h1>
+        <div class="DessertsCardList">
+            <!-- Churros -->
+            <div class="DessertsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Churros.jpg" alt="Churros croustillants servis avec une sauce au chocolat chaud.">
+                    <p id="CardTag">5,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Churros con Chocolate</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Churros</span> - Beignets dorés et croustillants servis avec une sauce
+                         chocolat chaude.
+                    </p>
+                </div>
             </div>
-            <div class="Price">9€</div>
-            <div class="CardTxt">             
-                <p>
-                    Quesadillas — Tortilla croustillante garnie de fromage fondant et 
-                    d'ingrédients au choix, simple et gourmand.
-                </p>
+
+            <!-- Flan Mexicano -->
+            <div class="DessertsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/Flan_Mexicano.jpg" alt="Flan mexicain doré au caramel sur une assiette.">
+                    <p id="CardTag">4,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Flan Mexicano</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Flan Mexicano</span> - Flan onctueux au caramel doré, doux et irrésistible.
+                    </p>
+                </div>
             </div>
+
+            <!-- Arroz con Leche -->
+            <div class="DessertsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/ArrozConLeche.jpg" alt="Riz au lait crémeux parfumé à la cannelle et à l’orange.">
+                    <p id="CardTag">4,00 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Arroz con Leche</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Arroz con Leche</span> - Riz au lait à la cannelle et zeste d’orange.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pan de Elote -->
+            <div class="DessertsCardContainer Card">
+                <div class="CardIMG">
+                    <img src="images/PanDeElote.jpg" alt="Tranche de gâteau au maïs moelleux et légèrement sucré.">
+                    <p id="CardTag">4,50 €</p>
+                </div>
+                <div class="CardTitle">
+                    <h2>Pan de Elote</h2>
+                </div>
+                <div class="CardTxt">             
+                    <p>
+                        <span class="TXT_Important">Pan de Elote</span> - Gâteau moelleux au maïs, légèrement sucré et fondant.
+                    </p>
+                </div>
+            </div>
+
         </div>
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/Burritos.jpg" alt="Image Burritos Mexicain">
-            </div>
-            <div class="Price">7€</div>
-            <div class="CardTxt">             
-                <p>
-                    Burritos — Farce généreuse en riz, haricots et viande, enroulée 
-                    pour un repas complet à emporter.
-                </p>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/Chilaquiles.jpg" alt="Image Chilaquiles Mexicain">
-            </div>
-            <div class="Price">5.50€</div>
-            <div class="CardTxt">             
-                <p>
-                    Chilaquiles — Plat traditionnel aux tortillas croustillantes, 
-                    salsa piquante et œuf ou fromage selon votre choix.
-                </p>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/Tortillas.jpg" alt="Image Tortillas Mexicain">
-            </div>
-            <div class="Price">6.50€</div>
-            <div class="CardTxt">             
-                <p>
-                    Tortillas — Maison et fraîches : l'accompagnement parfait pour tous nos plats.
-                </p>
-            </div>
-        </div>
-        <div class="CardContainer">
-            <div class="CardIMG">
-                <img class="MenuBodyImage" src="images/nachos.jpg" alt="Image Nachos Mexicain">
-            </div>
-            <div class="Price">8€</div>
-            <div class="CardTxt">             
-                <p>
-                    Nachos — Chips croustillantes, fromage fondu, pico de gallo et options pour partager.
-                </p>
+    </div>
+
+    <!-- ---------- FOOTER ---------- -->
+    <div class="FooterContainer">
+        <div class="FooterWrapper">
+            <div class="FooterContent">
+                <img src="images/Logo.png" alt="Logo Tacos y Más">
+                <h4>© 2025 Tacos y Más - Tous droits réservés</h4>
             </div>
         </div>
     </div>
+
+    <!-- Retour en haut -->
+	<a href="#" class="back-to-top">
+		<span class="material-icons">arrow_upward</span>
+	</a>
+
 </body>
 </html>
