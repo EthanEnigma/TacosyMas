@@ -1,3 +1,30 @@
+:root{
+    --Main-Color: hsl(18, 70%, 50%);
+    --Background-Color: white;
+    --HR-color: hsl(18, 80%, 80%);
+
+    --CurrentNav-Color: hsl(122, 40%, 61%);
+    --CurrentNav-Border: hsl(122, 40%, 41%);
+    --OtherNav-Color: hsl(34, 80%, 70%);
+    --OtherNav-Border: hsl(18, 65%, 45%);
+
+    --headerTitle-Color: white;
+    --Nav-Color: black;
+    --NavIcon-Color: white;
+
+    --CardsBackground-Color: hsl(46, 85%, 85%);
+    --CardsTagBackground-Color: rgba(255, 255, 255, 0.85);
+    --CardsTag-Color: black;
+    --CardsBoxShadow-Color: rgba(0, 0, 0, 0.25);
+    --CardsTitle-Color: hsl(20, 80%, 50%);
+
+    --TitleImportant-Color: hsl(20, 80%, 50%);
+    --TextImportant-Color: hsl(20, 100%, 65%);
+    --Footer-Color: white;
+
+    --BackToTopBackground-Color: hsl(18, 70%, 45%);
+}
+
 /* ---------- Général ---------- */
 * {
     margin: 0;
@@ -10,13 +37,13 @@ html{
 }
 
 body {
-    background-color: white;
+    background-color: var(--Background-Color);
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden; /* Empêche le scroll horizontal */
 }
 
 .customHR{
-    border: solid hsl(18, 80%, 80%) 2px;
+    border: solid var(--HR-color) 2px;
     border-radius: 5px;
     width: 90%;
     margin: 50px 0 10px 0;
@@ -29,7 +56,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    background-color: hsl(18, 70%, 50%);
+    background-color: var(--Main-Color);
     padding: 8px 20px;
     position: sticky;
     top: 0;
@@ -43,7 +70,7 @@ body {
 
 .headerTitle {
     text-align: center;
-    color: white;
+    color: var(--headerTitle-Color);
     font-size: 1rem;
     font-weight: bold;
 }
@@ -57,19 +84,19 @@ body {
     padding: 6px 14px;
     text-decoration: none;
     border-radius: 6px;
-    color: black;
+    color: var(--Nav-Color);
     font-weight: bold;
     font-size: 0.9rem;
     transition: background-color 0.3s;
 }
 
 .currentNav {
-    background-color: hsl(122, 40%, 61%);
-    border: 2px solid hsl(122, 40%, 41%);
+    background-color: var(--CurrentNav-Color);
+    border: 2px solid var(--CurrentNav-Border);
 }
 .otherNav {
-    background-color: hsl(34, 80%, 70%);
-    border: 2px solid hsl(18, 65%, 45%);
+    background-color: var(--OtherNav-Color);
+    border: 2px solid var(--OtherNav-Border);
 }
 .headerNav a:hover {
     filter: brightness(0.9);
@@ -79,7 +106,7 @@ body {
 .menu-icon {
     display: none;
     font-size: 1.8rem;
-    color: white;
+    color: var(--NavIcon-Color);
     cursor: pointer;
 }
 
@@ -127,8 +154,8 @@ body {
 .SnacksCardContainer{
     justify-self: center;
     width: 20vw;
-    background-color: hsl(46, 85%, 85%);
-    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
+    background-color: var(--CardsBackground-Color);
+    box-shadow: var(--CardsBoxShadow-Color) 3px 5px 5px;
     border-radius: 10px;
 }
 
@@ -136,8 +163,8 @@ body {
 .PlatsCardContainer{
     justify-self: center;
     width: 30vw;
-    background-color: hsl(46, 85%, 85%);
-    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
+    background-color: var(--CardsBackground-Color);
+    box-shadow: var(--CardsBoxShadow-Color) 3px 5px 5px;
     border-radius: 10px;
 }
 
@@ -145,8 +172,8 @@ body {
 .DessertsCardContainer{
     justify-self: center;
     width: 20vw;
-    background-color: hsl(46, 85%, 85%);
-    box-shadow: rgba(0, 0, 0, 0.25) 3px 5px 5px;
+    background-color: var(--CardsBackground-Color);
+    box-shadow: var(--CardsBoxShadow-Color) 3px 5px 5px;
     border-radius: 10px;
 }
 
@@ -154,7 +181,6 @@ body {
 .CardIMG{
     position: relative;
     justify-items: center;
-    background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
@@ -175,8 +201,8 @@ body {
     border-radius: 30px;
     font-size: 0.85rem;
     padding: 6px 12px;
-    background: rgba(255, 255, 255, 0.85);
-    color: black;
+    background: var(--CardsTagBackground-Color);
+    color: var(--CardsTag-Color);
     font-weight: bold;
 }
 
@@ -189,7 +215,7 @@ body {
 
 /* Titres */
 .CardTitle h2{
-    color: hsl(20, 80%, 50%);
+    color: var(--CardsTitle-Color);
 }
 
 /* Descriptions Cartes */
@@ -200,12 +226,12 @@ body {
 
 
 .Title_Important{
-    color: hsl(20, 80%, 50%);
+    color: var(--TitleImportant-Color);
     margin: 25px;
     text-align: center;
 }
 .TXT_Important{
-    color: hsl(20, 100%, 65%);
+    color: var(--TextImportant-Color);
 }
 
 .Card img{
@@ -222,8 +248,8 @@ body {
 .FooterContainer{
     width: 100%;
     margin-top: 50px;
-    background-color: hsl(18, 70%, 50%);
-    color: white;
+    background-color: var(--Main-Color);
+    color: var(--Footer-Color);
     margin: 50px 0 0 0;
     padding: 0;
     justify-items: center;
@@ -256,7 +282,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 0.9rem;
-    color: white;
+    color: var(--Footer-Color);
 }
 
 
@@ -269,7 +295,7 @@ body {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background-color: hsl(18, 70%, 45%);
+	background-color: var(--BackToTopBackground-Color);
 	border-radius: 0.5rem;
 	padding: 0.5rem;
 	text-decoration: none;
@@ -283,7 +309,7 @@ body {
 }
 
 .back-to-top:hover {
-	background-color: hsl(18, 70%, 40%);
+	filter: brightness(0.9);
 }
 .back-to-top:hover span {
 	transform: translateY(-4px);
@@ -309,13 +335,13 @@ body {
     .headerNav {
         display: none;
         flex-direction: column;
-        background-color: hsl(18, 70%, 45%);
+        background-color: var(--BackToTopBackground-Color);
         position: absolute;
         top: 60px;
         right: 15px;
         padding: 10px;
         border-radius: 10px;
-        box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        box-shadow: 0 3px 8px var(--CardsBoxShadow-Color);
     }
 
     /* Quand menu ouvert */
