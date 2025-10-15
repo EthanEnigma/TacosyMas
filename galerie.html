@@ -34,6 +34,147 @@
             <a class="otherNav" href="apropos.html">À Propos</a>
         </div>
     </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 16</div>
+            <img src="images/nachos.jpg" alt="Image de nachos croustillants garnis de fromage fondu et pico de gallo.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 16</div>
+            <img src="images/tortillas.jpg" alt="Image de tortillas maison moelleuses empilées sur une assiette.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 16</div>
+            <img src="images/chilaquiles.jpg" alt="Assiette de chilaquiles croustillants avec sauce piquante et fromage fondu.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 16</div>
+            <img src="images/guacamole.jpg" alt="Bol de guacamole frais servi avec des chips de maïs dorées.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 16</div>
+            <img src="images/Elotes.png" alt="Photo d’un épi de maïs grillé avec mayonnaise, fromage et piment.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 16</div>
+            <img src="images/SopaDeFrijoles.jpg" alt="Bol de soupe mexicaine aux haricots noirs et épices.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 16</div>
+            <img src="images/Tacos.jpeg" alt="Tacos français garnis de viande, frites et sauce maison.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 16</div>
+            <img src="images/enchiladas.jpg" alt="Enchiladas gratinées nappées de sauce rouge et fromage fondu.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">9 / 16</div>
+            <img src="images/quesadillas.png" alt="Quesadillas dorées et croustillantes avec fromage fondant.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 16</div>
+            <img src="images/burritos.jpg" alt="Burrito mexicain roulé avec haricots, viande et légumes.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">11 / 16</div>
+            <img src="images/Tamales.jpg" alt="Tamales traditionnels mexicains cuits dans des feuilles de maïs.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">12 / 16</div>
+            <img src="images/Tostadas.jpg" alt="Tostadas croustillantes garnies de viande, légumes et crème.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">13 / 16</div>
+            <img src="images/Churros.jpg" alt="Churros croustillants servis avec une sauce au chocolat chaud.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">14 / 16</div>
+            <img src="images/Flan_Mexicano.jpg" alt="Flan mexicain doré au caramel sur une assiette.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">15 / 16</div>
+            <img src="images/ArrozConLeche.jpg" alt="Riz au lait crémeux parfumé à la cannelle et à l’orange.">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">16 / 16</div>
+            <img src="images/PanDeElote.jpg" alt="Tranche de gâteau au maïs moelleux et légèrement sucré.">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <!-- Dots / indicators -->
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+            <span class="dot" onclick="currentSlide(9)"></span> 
+            <span class="dot" onclick="currentSlide(10)"></span> 
+            <span class="dot" onclick="currentSlide(11)"></span> 
+            <span class="dot" onclick="currentSlide(12)"></span> 
+            <span class="dot" onclick="currentSlide(13)"></span> 
+            <span class="dot" onclick="currentSlide(14)"></span> 
+            <span class="dot" onclick="currentSlide(15)"></span> 
+            <span class="dot" onclick="currentSlide(16)"></span> 
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Contrôle suivant/précédent
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Contrôle des points (dots)
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].classList.add("active");
+        }
+    </script>
+
     <!-- ---------- FOOTER ---------- -->
     <div class="FooterContainer">
         <div class="FooterWrapper">
