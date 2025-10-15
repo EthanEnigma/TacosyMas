@@ -287,6 +287,34 @@ body {
 
 
 
+/* Carousel contenu dans le flow (respecte padding parent) */
+.CarouselContainer {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  align-self: stretch;
+}
+
+.CarouselWrapper {
+  width: 100%;
+  height: calc(45vw - 40px);
+  overflow: hidden;
+}
+
+.CarouselWrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+
 /* Bouton Retour en haut */
 .back-to-top {
 	position: fixed;
