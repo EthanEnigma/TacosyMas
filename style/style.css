@@ -159,6 +159,14 @@ body {
     border-radius: 10px;
 }
 
+.AproposCardContainer{
+    justify-self: center;
+    width: 23vw;
+    background-color: var(--CardsBackground-Color);
+    box-shadow: var(--CardsBoxShadow-Color) 3px 5px 5px;
+    border-radius: 10px;
+}
+
 /* Cartes Plats */
 .PlatsCardContainer{
     justify-self: center;
@@ -222,6 +230,14 @@ body {
 .CardTxt{
     width: 100%;
     padding: 20px;
+}
+
+.LocationCardTxt{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px; /* Ou 1.125rem */
+
+
 }
 
 
