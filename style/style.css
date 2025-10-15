@@ -39,7 +39,14 @@ html{
 body {
     background-color: var(--Background-Color);
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
+    overflow-x: hidden;
+}
+
+.BodyAPropos{
+    background-image: url("/images/Restaurant2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(0.85) blur(5px);
 }
 
 .customHR{
@@ -150,6 +157,21 @@ body {
     gap: 4vw 1.5vw;
 }
 
+.HorizontalCardList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4vw 1.5vw;
+}
+
+/* Faire prendre à la carte toute la largeur de la colonne du grid */
+.HorizontalCardContainer {
+    justify-self: center;
+    width: 50vw;
+    background-color: var(--CardsBackground-Color);
+    box-shadow: var(--CardsBoxShadow-Color) 3px 5px 5px;
+    border-radius: 10px;
+}
+
 /* Cartes Snacks */
 .SnacksCardContainer{
     justify-self: center;
@@ -184,6 +206,7 @@ body {
     box-shadow: var(--CardsBoxShadow-Color) 3px 5px 5px;
     border-radius: 10px;
 }
+
 
 /* Images Cartes */
 .CardIMG{
