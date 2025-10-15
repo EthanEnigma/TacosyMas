@@ -38,67 +38,92 @@
     <div class="BackgroundImage">
     </div>
 
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="images/Restaurant2.jpg" alt="Extérieur du restaurant Tacos y Mas avec vue panoramique sur la mer, décoration mexicaine et ambiance conviviale.">
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="images/Restaurant.jpg" alt="Façade du restaurant mexicain Tacos y Mas, ambiance colorée et authentique à deux pas de la mer.">
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="images/quesadillas.png" alt="Assiette de quesadillas mexicains servis chez Tacos y Mas, garnis de viande marinée et de légumes frais.">
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-        <br>
-
-        <!-- Dots / indicators -->
-        <div class="dots-container">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
+    <div class="ReservationContainer">
+    
+    <div class="ReservationButtons">
+        <div class="ReservationLeftContent">
+            <p>📅 Réservez votre table dès maintenant !</p>
+            <a href="">Réserver</a>
         </div>
     </div>
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+    
+    <div class="ReservationImages">
+        <div class="ReservationRightContent">
+            <p>⏰ Horaires : Lun - Dim : 11h00 - 22h00</p>
+            <p>📍 Lieu : Cancún, Mexique</p>
+            <p>🏠 Adresse : 123 Rue des Tacos, Quartier Centro</p>
+        </div>
+    </div>
+</div>
 
-        // Contrôle suivant/précédent
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
+<div class="slideshow-container">
 
-        // Contrôle des points (dots)
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/Restaurant3.jpg" alt="Intérieur chaleureux d'un restaurant avec des tables en bois, des peintures au mur et des écrans de télévision allumés.">
+    </div>
 
-        function showSlides(n) {
-        let i;
-        const slides = document.getElementsByClassName("mySlides");
-        const dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("active");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].classList.add("active");
-        }
-    </script>
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="images/Restaurant2.jpg" alt="Extérieur du restaurant Tacos y Mas avec vue panoramique sur la mer, décoration mexicaine et ambiance conviviale.">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="images/Restaurant.jpg" alt="Façade du restaurant mexicain Tacos y Mas, ambiance colorée et authentique à deux pas de la mer.">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/quesadillas.png" alt="Assiette de quesadillas mexicains servis chez Tacos y Mas, garnis de viande marinée et de légumes frais.">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <!-- Dots / indicators -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Contrôle suivant/précédent
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Contrôle des points (dots)
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].classList.add("active");
+    }
+</script>
 
     <!-- ---------- FOOTER ---------- -->
     <div class="FooterContainer">

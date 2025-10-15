@@ -283,6 +283,84 @@ body {
 }
 
 
+.ReservationContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 30vw;
+    gap: 0;
+    text-align: center;
+    background-color: var(--CardsBackground-Color);
+}
+
+.ReservationButtons, .ReservationImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Partie gauche : bouton et petit texte */
+.ReservationLeftContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.ReservationLeftContent p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.ReservationButtons a {
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    background-color: #f39c12; /* orange */
+    border: 2px solid #d35400;
+}
+
+/* Partie droite : horaires, lieu et adresse */
+.ReservationImages {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.ReservationRightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsive : mobile empilé */
+@media (max-width: 768px) {
+    .ReservationContainer {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .ReservationButtons, .ReservationImages {
+        min-height: auto;
+    }
+
+    .ReservationLeftContent p, .ReservationRightContent p {
+        font-size: 1rem;
+    }
+
+    .ReservationButtons a {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+    }
+}
+
 /* ---------- FOOTER ---------- */
 .FooterContainer{
     width: 100%;
